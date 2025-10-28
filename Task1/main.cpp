@@ -1,6 +1,6 @@
 #include <iostream>
 #include <chrono>
-#include <cstdlib>
+
 using namespace std;
 
 //Main Array blank initially
@@ -81,7 +81,6 @@ int insertion_sort_count (int arr[], int n) {
         while (j >= 0) {
             cnt++;
             if (key < arr[j]) {
-
                 arr[j + 1] = arr[j];
                 j--;
             } else break;
@@ -100,7 +99,7 @@ void test_comparisons() {
         auto start = chrono::high_resolution_clock::now();
         cout << bubble_sort_count(arr[i], n)<<'\n' ;
         auto stop = chrono::high_resolution_clock::now();
-        auto duration = duration_cast<std::chrono::microseconds>(stop - start);
+        auto duration = duration_cast<std::chrono::milliseconds>(stop - start);
         cout<< duration.count() << " milliseconds\n";
     }
     reverseSorted();
@@ -110,7 +109,7 @@ void test_comparisons() {
         auto start = chrono::high_resolution_clock::now();
         cout << bubble_sort_count(arr[i], n)<<'\n' ;
         auto stop = chrono::high_resolution_clock::now();
-        auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
+        auto duration = duration_cast<std::chrono::milliseconds>(stop - start);
         cout<< duration.count() << " milliseconds\n";
     }
     randPopulating();
@@ -120,7 +119,7 @@ void test_comparisons() {
         auto start = chrono::high_resolution_clock::now();
         cout << bubble_sort_count(randArr[i], n) << '\n';
         auto stop = chrono::high_resolution_clock::now();
-        auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
+        auto duration = duration_cast<std::chrono::milliseconds>(stop - start);
         cout<< duration.count() << " milliseconds\n";
     }
     sortedData();
@@ -130,7 +129,7 @@ void test_comparisons() {
          auto start = chrono::high_resolution_clock::now();
          cout << selection_sort_count(arr[i], n) << '\n';
          auto stop = chrono::high_resolution_clock::now();
-         auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
+         auto duration = duration_cast<std::chrono::milliseconds>(stop - start);
          cout<< duration.count() << " milliseconds\n";
      }
     reverseSorted();
@@ -140,7 +139,7 @@ void test_comparisons() {
         auto start = chrono::high_resolution_clock::now();
         cout<< selection_sort_count(arr[i], n) << '\n';
         auto stop = chrono::high_resolution_clock::now();
-        auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
+        auto duration = duration_cast<std::chrono::milliseconds>(stop - start);
         cout<< duration.count() << " milliseconds\n";
     }
     randPopulating();
@@ -150,7 +149,7 @@ void test_comparisons() {
         auto start = chrono::high_resolution_clock::now();
         cout << selection_sort_count(randArr[i], n) << '\n';
         auto stop = chrono::high_resolution_clock::now();
-        auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
+        auto duration = duration_cast<std::chrono::milliseconds>(stop - start);
         cout<< duration.count() << " milliseconds\n";
     }
 
@@ -161,7 +160,7 @@ void test_comparisons() {
          auto start = chrono::high_resolution_clock::now();
          cout<< insertion_sort_count(arr[i], n) << '\n';
          auto stop = chrono::high_resolution_clock::now();
-         auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
+         auto duration = duration_cast<std::chrono::milliseconds>(stop - start);
          cout<< duration.count() << " milliseconds\n";
      }
 
@@ -172,7 +171,7 @@ void test_comparisons() {
         auto start = chrono::high_resolution_clock::now();
         cout << insertion_sort_count(arr[i], n) << '\n';
         auto stop = chrono::high_resolution_clock::now();
-        auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
+        auto duration = duration_cast<std::chrono::milliseconds>(stop - start);
         cout<< duration.count() << " milliseconds\n";
     }
 
@@ -183,7 +182,7 @@ void test_comparisons() {
         auto start = chrono::high_resolution_clock::now();
         cout << insertion_sort_count(randArr[i], n) << '\n';
         auto stop = chrono::high_resolution_clock::now();
-        auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
+        auto duration = duration_cast<std::chrono::milliseconds>(stop - start);
         cout<< duration.count() << " milliseconds\n";
     }
 }
